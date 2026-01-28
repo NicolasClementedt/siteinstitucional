@@ -24,13 +24,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/sobre"
-                className="bg-cyan-700 hover:bg-cyan-950 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="bg-sky-600 hover:bg-sky-950 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Conheça a Igreja
               </Link>
               <Link
                 to="/contato"
-                className="bg-gray-500 hover:bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="bg-slate-400 hover:bg-slate-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Entre em Contato
               </Link>
@@ -39,25 +39,27 @@ export default function Home() {
         </section>
 
         {/* Programação Semanal*/}
-        <section className="py-16 px-4 bg-blue-600 text-white">
+        <section className="py-16 px-4 bg-slate-400 text-white">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               Participe dos Nossos Cultos
             </h2>
+            {/* Grid das caixas */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {" "}
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-2">Domingo</h3>
                 <p className="text-blue-100 mb-1">Culto de Celebração</p>
-                <p className="text-2xl font-bold">10:00</p>
+                <p className="text-2xl font-bold">09:30</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
+                <h3 className="text-xl font-semibold mb-2">Terça-feira</h3>
+                <p className="text-blue-100 mb-1">Oração e Intercessão</p>
+                <p className="text-2xl font-bold">20:00</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
                 <h3 className="text-xl font-semibold mb-2">Quarta-feira</h3>
-                <p className="text-blue-100 mb-1">Estudo Bíblico</p>
-                <p className="text-2xl font-bold">19:30</p>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-2">Sexta-feira</h3>
-                <p className="text-blue-100 mb-1">Culto de Jovens</p>
+                <p className="text-blue-100 mb-1">Imersão</p>
                 <p className="text-2xl font-bold">20:00</p>
               </div>
             </div>
@@ -65,15 +67,15 @@ export default function Home() {
         </section>
 
         {/* Valores */}
-        <section className="py-16 px-4 bg-gray-50">
+        <section className="py-16 px-4 bg-slate-50">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
               Nossos Valores
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Heart className="w-8 h-8 text-blue-600" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-4">
+                  <Heart className="w-8 h-8 text-red-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Amor</h3>
                 <p className="text-gray-600">
@@ -83,8 +85,8 @@ export default function Home() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <BookOpen className="w-8 h-8 text-blue-600" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-4">
+                  <BookOpen className="w-8 h-8 text-sky-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Palavra</h3>
                 <p className="text-gray-600">
@@ -93,18 +95,20 @@ export default function Home() {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Users className="w-8 h-8 text-blue-600" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-4">
+                  <Users className="w-8 h-8 text-red-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Comunidade</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  Comunidade e Serviço
+                </h3>
                 <p className="text-gray-600">
                   Unidos como família, apoiando uns aos outros em amor e verdade
                 </p>
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Calendar className="w-8 h-8 text-blue-600" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-4">
+                  <Calendar className="w-8 h-8 text-sky-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Adoração</h3>
                 <p className="text-gray-600">
@@ -124,19 +128,18 @@ export default function Home() {
                   Quem Somos
                 </h2>
                 <p className="text-gray-600 text-lg mb-4">
-                  A Igreja Esperança é uma comunidade cristã comprometida em
-                  viver e compartilhar o amor de Cristo. Fundada em 1995, nossa
-                  missão é ser um farol de esperança, fé e amor em nossa
-                  comunidade.
+                  A Igreja Seguidores de Cristo nasceu de cultos simples feitos
+                  no lar, com o tempo o que começou pequeno foi crescendo até
+                  precisar de um local maior e depois um local maior ainda. Mais
+                  de uma década depois, mantendo a essência daqueles cultos
+                  íntimos, temos uma igreja que tem por missão o amor e o
+                  serviço, fundamentada na palavra de Deus, buscamos ser
+                  seguidores de Jesus Cristo.
                 </p>
-                <p className="text-gray-600 text-lg mb-6">
-                  Acreditamos na importância de cada pessoa e no poder
-                  transformador do Evangelho. Venha fazer parte da nossa família
-                  e experimentar o amor de Deus.
-                </p>
+
                 <Link
                   to="/sobre"
-                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                  className="inline-block bg-sky-600 hover:bg-sky-950 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Saiba Mais
                 </Link>
@@ -152,19 +155,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Final */}
+        {/* Convite */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Venha Nos Visitar
             </h2>
             <p className="text-gray-600 text-lg mb-8">
-              Estamos de portas abertas para você. Venha conhecer nossa
-              comunidade e experimentar o amor de Deus.
+              Venha conhecer nossa comunidade, estamos te esperando!.
             </p>
             <Link
               to="/contato"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="inline-block bg-sky-600 hover:bg-sky-950 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               Entre em Contato
             </Link>
