@@ -66,7 +66,7 @@ export default function Contact() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-sky-400 to-sky-700 py-16 px-4 text-white">
+      <section className="bg-linear-to-r from-sky-400 to-sky-700 py-16 px-4 text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
             Entre em Contato
@@ -291,7 +291,7 @@ export default function Contact() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
             Nossa Localização
           </h2>
-          <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg h-[600px] flex items-center justify-center">
+          <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg h-150 flex items-center justify-center">
             <div className="text-center p-8">
               <p className="text-gray-700 text-lg font-medium mb-2">
                 Rua Serra do Mar, 176

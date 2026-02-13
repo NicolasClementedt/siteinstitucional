@@ -7,7 +7,7 @@ export default function Home() {
       <div className="bg-white">
         {/* Seção Inicial/Banner */}
 
-        <section className="relative h-[600px] flex items-center justify-center text-white">
+        <section className="relative h-150 flex items-center justify-center text-white">
           <div className="absolute inset-0 bg-black/50 z-10" />
           <img
             src="https://images.unsplash.com/photo-1478147427282-58a87a120781?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -144,7 +144,7 @@ export default function Home() {
                   Saiba Mais
                 </Link>
               </div>
-              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+              <div className="relative h-100 rounded-lg overflow-hidden shadow-lg">
                 <img
                   src="https://images.unsplash.com/photo-1713552108094-2de99ab121a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaHVyY2glMjBpbnRlcmlvciUyMHdvcnNoaXB8ZW58MXx8fHwxNzY5NDc5MDA4fDA&ixlib=rb-4.1.0&q=80&w=1080"
                   alt="Interior da igreja"
