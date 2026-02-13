@@ -20,9 +20,9 @@ export default function Navigation() {
   //função que verifica se o usuário está na página corresponde ao link que o mouse está sobre
   const isActive = (path: string) => {
     if (path === "/") {
-      return location.pathname === "/";
+      return location.pathname === "/"; //completa o url após a / baseado no pathname do endpoint
     }
-    return location.pathname.startsWith(path);
+    return location.pathname.startsWith(path); //marca baseado no endpoint pai
   };
 
   return (
@@ -39,19 +39,24 @@ export default function Navigation() {
 
           {/* Tela Grande */}
           <div className="hidden md:flex items-center gap-8">
-            {links.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`transition-colors ${
-                  isActive(link.to)
-                    ? "text-sky-600 font-medium"
-                    : "text-gray-400 hover:text-gray-950"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {links.map(
+              (
+                link, //puxa o array de links e exibe
+              ) => (
+                <Link
+                  key={link.to} //id do link
+                  to={link.to} //endpoint do id
+                  className={`transition-colors ${
+                    isActive(link.to) //funcao ternaria para marcar o ativado
+                      ? "text-sky-600 font-medium"
+                      : "text-gray-400 hover:text-gray-950" //estilizacao do link não ativo
+                  }`}
+                >
+                  {link.label}{" "}
+                  {/* chama o texto dos links pela etiqueta definida no array*/}
+                </Link>
+              ),
+            )}
           </div>
 
           {/* Menu Retrátil */}

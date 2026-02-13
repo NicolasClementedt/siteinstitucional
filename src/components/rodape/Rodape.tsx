@@ -1,5 +1,5 @@
 import { InstagramLogoIcon } from "@phosphor-icons/react";
-import { Church, Mail, MapPin, Phone } from "lucide-react";
+import { Church, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router";
 
 export default function Footer() {
@@ -16,8 +16,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-gray-400">
-              Uma comunidade de fé, amor e serviço. Venha adorar conosco e fazer
-              parte da nossa família.
+              Uma comunidade de fé, amor e serviço.
             </p>
           </div>
 
@@ -91,7 +90,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-sky-600" />
                 <span className="text-gray-400">
-                  contato@igrejaesperanca.com.br
+                  contato@igrejaseguidores.com.br
                 </span>
               </div>
             </div>

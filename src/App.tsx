@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/home/Home";
 import Footer from "./components/rodape/Rodape";
 import NavBar from "./components/navbar/NavBar";
+import Sobre from "./pages/sobre/Sobre";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/sobre" element={<Sobre />} />
           </Routes>
         </div>
         <Footer />
