@@ -13,7 +13,7 @@ export default function Navigation() {
     { to: "/", label: "Início" },
     { to: "/sobre", label: "Sobre" },
     { to: "/galeria", label: "Galeria" },
-    { to: "/recursos", label: "Recursos" },
+    // { to: "/recursos", label: "Recursos" },
     { to: "/contato", label: "Contato" },
   ];
 
