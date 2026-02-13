@@ -1,4 +1,4 @@
-import { History, Target, Eye, Users2 } from "lucide-react";
+import { History, Users2 } from "lucide-react";
 
 export default function Sobre() {
   return (
