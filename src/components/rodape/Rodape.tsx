@@ -5,7 +5,7 @@ import logoBranca from "../../assets/Logomarca Seguidores Branco PNG.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo e Descrição */}
@@ -63,7 +63,7 @@ export default function Footer() {
                   className="flex items-start gap-3"
                   href="/contato"
                 >
-                  <MapPin className="w-5 h-5 text-sky-600 mt-0.5" />
+                  <MapPin className="w-5 h-5 text-white mt-0.5" />
                   <span className="text-gray-400 hover:text-gray-200">
                     Rua Serra do Mar, 176
                     <br />
@@ -79,7 +79,7 @@ export default function Footer() {
                   className="flex items-center gap-3"
                   href="https://www.instagram.com/igrejaseguidoresoficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 >
-                  <InstagramLogoIcon className="w-5 h-6 text-sky-600" />
+                  <InstagramLogoIcon className="w-5 h-6 text-whitw" />
                   <span className="text-gray-400 hover:text-gray-200">
                     {" "}
                     Acompanhe no Instagram{" "}
@@ -89,7 +89,7 @@ export default function Footer() {
 
               {/* Email */}
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-sky-600" />
+                <Mail className="w-5 h-5 text-white" />
                 <span className="text-gray-400">
                   contato@igrejaseguidores.com.br
                 </span>

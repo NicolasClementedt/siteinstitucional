@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { Calendar, Heart, BookOpen, Users } from "lucide-react";
+import logoEscritaBranca from "../../assets/Logotipo Seguidores Branco PNG.png";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       <div className="bg-white">
         {/* Seção Inicial/Banner */}
 
-        <section className="relative h-150 flex items-center justify-center text-white">
+        <section className="relative h-200 flex items-center justify-center text-white">
           <div className="absolute inset-0 bg-black/50 z-10" />
           <img
             src="https://images.unsplash.com/photo-1478147427282-58a87a120781?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -15,22 +16,20 @@ export default function Home() {
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="relative z-20 text-center px-4">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">
-              Igreja Seguidores de Cristo
-            </h1>
-            <p className="text-xl md:text-2xl mb-8">
-              Uma comunidade de fé, amor e serviço
-            </p>
+            <img
+              className="text-5xl md:text-6xl font-bold m-8 p-10"
+              src={logoEscritaBranca}
+            />
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/sobre"
-                className="bg-sky-600 hover:bg-sky-950 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="bg-gray-800 hover:bg-sky-950 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Conheça a Igreja
               </Link>
               <Link
                 to="/contato"
-                className="bg-slate-400 hover:bg-slate-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="bg-gray-700 hover:bg-sky-900 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Entre em Contato
               </Link>
@@ -39,7 +38,7 @@ export default function Home() {
         </section>
 
         {/* Programação Semanal*/}
-        <section className="py-16 px-4 bg-slate-400 text-white">
+        <section className="py-16 px-4 bg-gray-800 text-white">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               Participe dos Nossos Cultos
@@ -75,7 +74,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-4">
-                  <Heart className="w-8 h-8 text-red-600" />
+                  <Heart className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Amor</h3>
                 <p className="text-gray-600">
@@ -86,7 +85,7 @@ export default function Home() {
 
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-4">
-                  <BookOpen className="w-8 h-8 text-sky-600" />
+                  <BookOpen className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Palavra</h3>
                 <p className="text-gray-600">
@@ -96,7 +95,7 @@ export default function Home() {
 
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-4">
-                  <Users className="w-8 h-8 text-red-600" />
+                  <Users className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">
                   Comunidade e Serviço
@@ -108,7 +107,7 @@ export default function Home() {
 
               <div className="bg-white p-6 rounded-lg shadow-md text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-full mb-4">
-                  <Calendar className="w-8 h-8 text-sky-600" />
+                  <Calendar className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Adoração</h3>
                 <p className="text-gray-600">
@@ -139,7 +138,7 @@ export default function Home() {
 
                 <Link
                   to="/sobre"
-                  className="inline-block bg-sky-600 hover:bg-sky-950 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                  className="inline-block bg-gray-700 hover:bg-sky-950 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Saiba Mais
                 </Link>
@@ -166,7 +165,7 @@ export default function Home() {
             </p>
             <Link
               to="/contato"
-              className="inline-block bg-sky-600 hover:bg-sky-950 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+              className="inline-block bg-gray-700 hover:bg-sky-950 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
               Entre em Contato
             </Link>

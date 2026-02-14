@@ -33,9 +33,9 @@ export default function Navigation() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <img className="w-8 h-8 text-sky-600" src={logoPreta} />
-            <span className="text-xl font-semibold text-gray-900">
+            {/* <span className="text-xl font-semibold text-gray-900">
               Igreja Seguidores de Cristo
-            </span>
+            </span> */}
           </Link>
 
           {/* Tela Grande */}
@@ -49,8 +49,8 @@ export default function Navigation() {
                   to={link.to} //endpoint do id
                   className={`transition-colors ${
                     isActive(link.to) //funcao ternaria para marcar o ativado
-                      ? "text-sky-600 font-medium"
-                      : "text-gray-400 hover:text-gray-950" //estilizacao do link não ativo
+                      ? "text-black font-semibold active:"
+                      : "text-gray-500 hover:text-black" //estilizacao do link não ativo
                   }`}
                 >
                   {link.label}{" "}
@@ -84,8 +84,8 @@ export default function Navigation() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`block py-2 px-4 transition-colors ${
                   isActive(link.to)
-                    ? "text-sky-600 font-medium bg-blue-50"
-                    : "text-gray-600 hover:bg-gray-100"
+                    ? "text-black font-semibold bg-gray-100"
+                    : "text-gray-600 hover:bg-gray-950 hover:text-white"
                 }`}
               >
                 {link.label}

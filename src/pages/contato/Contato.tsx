@@ -66,7 +66,7 @@ export default function Contact() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-linear-to-r from-sky-400 to-sky-700 py-16 px-4 text-white">
+      <section className="bg-linear-to-r from-slate-500 to-sky-950 py-16 px-4 text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
             Entre em Contato
@@ -89,8 +89,8 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6 text-sky-600" />
+                  <div className="bg-black p-3 rounded-lg">
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
@@ -107,8 +107,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <Phone className="w-6 h-6 text-sky-600" />
+                  <div className="bg-black p-3 rounded-lg">
+                    <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
@@ -120,8 +120,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <Mail className="w-6 h-6 text-sky-600" />
+                  <div className="bg-black p-3 rounded-lg">
+                    <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
@@ -137,8 +137,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <Clock className="w-6 h-6 text-sky-600" />
+                  <div className="bg-black p-3 rounded-lg">
+                    <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
@@ -166,19 +166,19 @@ export default function Contact() {
                   <a
                     target="_blank"
                     href="https://www.instagram.com/igrejaseguidoresoficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                    className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors"
+                    className="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors"
                     aria-label="Instagram"
                   >
-                    <span className="text-sky-600 font-semibold">📷</span>
+                    <span className="text-slate-600 font-semibold">📷</span>
                   </a>
 
                   <a
                     target="_blank"
                     href="https://youtube.com/@igrejaseguidoresoficial?si=rTRR3KFn7aPwITdu"
-                    className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors"
+                    className="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors"
                     aria-label="YouTube"
                   >
-                    <span className="text-sky-600 font-semibold">▶</span>
+                    <span className="text-sky-700 font-semibold">▶</span>
                   </a>
                 </div>
               </div>
@@ -268,7 +268,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-sky-600 hover:bg-sky-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-gray-700 hover:bg-black text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     "Enviando..."

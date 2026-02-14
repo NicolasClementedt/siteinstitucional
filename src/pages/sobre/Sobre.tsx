@@ -4,13 +4,14 @@ export default function Sobre() {
   return (
     <div className="bg-white">
       {/* Banner */}
-      <section className="relative h-[400px] flex items-center justify-center text-white">
+      <section className="relative h-100 flex items-center justify-center text-white">
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img
           src="https://images.unsplash.com/photo-1729089049653-24312fdca908?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZW9wbGUlMjBwcmF5aW5nJTIwdG9nZXRoZXJ8ZW58MXx8fHwxNzY5NDgzNDkxfDA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Comunidade em oração"
           className="absolute inset-0 w-full h-full object-cover"
         />
+
         <div className="relative z-20 text-center px-4">
           <h1 className="text-5xl md:text-6xl font-bold">Nossa História</h1>
         </div>
@@ -20,8 +21,8 @@ export default function Sobre() {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-start gap-4 mb-8">
-            <div className="bg-blue-100 p-3 rounded-lg">
-              <History className="w-8 h-8 text-sky-600" />
+            <div className="bg-slate-300 p-3 rounded-lg">
+              <History className="w-8 h-8 text-slate-800" />
             </div>
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -104,7 +105,7 @@ export default function Sobre() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                   <Users2 className="w-8 h-8  text-black" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -119,7 +120,7 @@ export default function Sobre() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                   <Users2 className="w-8 h-8  text-black" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -135,7 +136,7 @@ export default function Sobre() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                   <Users2 className="w-8 h-8  text-black" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -151,7 +152,7 @@ export default function Sobre() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                   <Users2 className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -166,7 +167,7 @@ export default function Sobre() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                   <Users2 className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -181,7 +182,7 @@ export default function Sobre() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                   <Users2 className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -196,7 +197,7 @@ export default function Sobre() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                   <Users2 className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -211,7 +212,7 @@ export default function Sobre() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                   <Users2 className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -226,7 +227,7 @@ export default function Sobre() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                   <Users2 className="w-8 h-8 text-black" />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -252,10 +253,10 @@ export default function Sobre() {
             <div className="space-y-8">
               <div className="flex gap-6">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 text-black rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 text-black rounded-full flex items-center justify-center font-bold">
                     1
                   </div>
-                  <div className="w-1 h-full bg-blue-200 mt-2" />
+                  <div className="w-1 h-full bg-slate-200 mt-2" />
                 </div>
                 <div className="pb-8 text-left">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -270,10 +271,10 @@ export default function Sobre() {
 
               <div className="flex gap-6">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 text-black rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 text-black rounded-full flex items-center justify-center font-bold">
                     2
                   </div>
-                  <div className="w-1 h-full bg-blue-200 mt-2" />
+                  <div className="w-1 h-full bg-slate-200 mt-2" />
                 </div>
                 <div className="pb-8 text-left">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -288,10 +289,10 @@ export default function Sobre() {
 
               <div className="flex gap-6">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 text-black rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 text-black rounded-full flex items-center justify-center font-bold">
                     3
                   </div>
-                  <div className="w-1 h-full bg-blue-200 mt-2" />
+                  <div className="w-1 h-full bg-slate-200 mt-2" />
                 </div>
                 <div className="pb-8 text-left">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -306,7 +307,7 @@ export default function Sobre() {
 
               <div className="flex gap-6 text-left">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 text-black rounded-full flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 text-black rounded-full flex items-center justify-center font-bold">
                     4
                   </div>
                 </div>
