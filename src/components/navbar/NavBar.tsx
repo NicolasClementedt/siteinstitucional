@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router";
-import { Church, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoPreta from "../../assets/Logomarca Seguidores Preto PNG.png";
 
 export default function Navigation() {
   const location = useLocation(); //marca qual página o usuário está
@@ -31,7 +32,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <Church className="w-8 h-8 text-sky-600" />
+            <img className="w-8 h-8 text-sky-600" src={logoPreta} />
             <span className="text-xl font-semibold text-gray-900">
               Igreja Seguidores de Cristo
             </span>

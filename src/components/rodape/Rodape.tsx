@@ -1,6 +1,7 @@
 import { InstagramLogoIcon } from "@phosphor-icons/react";
-import { Church, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import { Link } from "react-router";
+import logoBranca from "../../assets/Logomarca Seguidores Branco PNG.png";
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
           {/* Logo e Descrição */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Church className="w-8 h-8 text-sky-600" />
+              <img className="w-8 h-8 text-sky-600" src={logoBranca} />
               <span className="text-xl font-semibold">
                 Igreja Seguidores de Cristo
               </span>
