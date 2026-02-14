@@ -33,16 +33,16 @@ const galleryImages = [
   },
 ];
 
-const categories = [
+/*const categories = [
   "Todos",
   "Cultos",
   "Ministérios",
   "Eventos",
   "Infraestrutura",
-];
+]; */
 
 export default function Gallery() {
-  const [selectedCategory, setSelectedCategory] = useState("Todos");
+  const [selectedCategory] = useState("Todos");
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const filteredImages =
@@ -53,7 +53,7 @@ export default function Gallery() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-black to-sky-950 py-16 px-4 text-white">
+      <section className="bg-linear-to-r from-black to-sky-950 py-16 px-4 text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
             Galeria de Fotos
