@@ -4,6 +4,7 @@ import Footer from "./components/rodape/Rodape";
 import NavBar from "./components/navbar/NavBar";
 import Sobre from "./pages/sobre/Sobre";
 import Contato from "./pages/contato/Contato";
+import Gallery from "./pages/galeria/Galeria";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/sobre" element={<Sobre />} />
             <Route path="contato" element={<Contato />} />
+            <Route path="galeria" element={<Gallery />} />
           </Routes>
         </div>
         <Footer />

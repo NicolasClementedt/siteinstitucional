@@ -23,13 +23,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/sobre"
-                className="bg-gray-800 hover:bg-sky-950 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="bg-gray-700 hover:bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold transition-colors border-solid-white"
               >
                 Conheça a Igreja
               </Link>
               <Link
                 to="/contato"
-                className="bg-gray-700 hover:bg-sky-900 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="bg-gray-700 hover:bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Entre em Contato
               </Link>

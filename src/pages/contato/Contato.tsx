@@ -66,7 +66,7 @@ export default function Contact() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-linear-to-r from-slate-500 to-sky-950 py-16 px-4 text-white">
+      <section className="bg-linear-to-r from-black to-sky-950 py-16 px-4 text-white">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
             Entre em Contato

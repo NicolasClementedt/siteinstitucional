@@ -1,14 +1,146 @@
-import { History, Users2 } from "lucide-react";
+import { History, Users2, X } from "lucide-react";
+import { useState } from "react";
+
+type Ministerio = {
+  id: string;
+  titulo: string;
+  descricaoCurta: string;
+  descricaoCompleta: string;
+  icon: typeof Users2;
+};
+
+const ministeriosData: Ministerio[] = [
+  {
+    id: "boas-vindas",
+    titulo: "Boas-Vindas",
+    descricaoCurta:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dicta numquam suscipit temporibus natus, impedit nulla odit repellat minima eius velit molestiae unde dolor quibusdam magnam inventore nihil! Neque, culpa!.",
+    descricaoCompleta: `
+      <h4 class="text-xl font-semibold mb-3">Sobre o Ministério</h4>
+      <p class="mb-4">O ministério de Boas-Vindas é responsável por receber e acolher todos que chegam à igreja, criando um ambiente caloroso e acolhedor.</p>
+      
+      <h4 class="text-xl font-semibold mb-3">O que fazemos</h4>
+      <ul class="list-disc list-inside mb-4 space-y-2">
+        <li>Recepção no estacionamento</li>
+        <li>Orientação aos visitantes</li>
+        <li>Distribuição de materiais</li>
+        <li>Atendimento às necessidades dos membros</li>
+      </ul>
+      
+      <h4 class="text-xl font-semibold mb-3">Como participar</h4>
+      <p>Entre em contato conosco através do email: boasvindas@igreja.com</p>
+    `,
+    icon: Users2,
+  },
+  {
+    id: "louvor",
+    titulo: "Louvor",
+    descricaoCurta:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, ab. Quidem earum consequuntur dolore atque expedita! Culpa eius veritatis explicabo molestias, cum enim consequuntur possimus nulla necessitatibus dolor voluptate nisi?",
+    descricaoCompleta: `
+      <h4 class="text-xl font-semibold mb-3">Sobre o Ministério</h4>
+      <p class="mb-4">O ministério de Louvor conduz a congregação em adoração através da música.</p>
+      
+      <h4 class="text-xl font-semibold mb-3">Requisitos</h4>
+      <ul class="list-disc list-inside mb-4 space-y-2">
+        <li>Experiência com instrumento ou vocal</li>
+        <li>Disponibilidade para ensaios semanais</li>
+        <li>Comprometimento com a equipe</li>
+      </ul>
+    `,
+    icon: Users2,
+  },
+  {
+    id: "sonosplastia",
+    titulo: "Sonosplastia",
+    descricaoCurta:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse deleniti placeat accusantium doloribus maiores illum mollitia reiciendis laborum quis id facilis, incidunt ullam repellendus, asperiores natus pariatur quidem consectetur repellat!",
+    descricaoCompleta: `
+      <h4 class="text-xl font-semibold mb-3">Sobre o Ministério</h4>
+      <p class="mb-4">Responsável pela qualidade sonora de todos os eventos da igreja.</p>
+    `,
+    icon: Users2,
+  },
+  {
+    id: "kids",
+    titulo: "Kids",
+    descricaoCurta:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum vel animi, optio alias ratione dolorem nostrum illum atque autem vitae, veniam nemo provident, nihil praesentium error ipsam minus beatae officia!",
+    descricaoCompleta: `
+      <h4 class="text-xl font-semibold mb-3">Ministério Infantil</h4>
+      <p class="mb-4">Cuidando e ensinando as crianças sobre o amor de Deus.</p>
+    `,
+    icon: Users2,
+  },
+  {
+    id: "bunkers",
+    titulo: "Bunkers",
+    descricaoCurta:
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. In accusantium obcaecati nihil dolorum suscipit quaerat? Officia sed alias eum aliquam. Harum at molestiae veniam illo fugiat voluptatibus facere impedit cumque!",
+    descricaoCompleta: `
+      <h4 class="text-xl font-semibold mb-3">Ministério de Jovens</h4>
+      <p class="mb-4">Conectando jovens com propósito e fé.</p>
+    `,
+    icon: Users2,
+  },
+  {
+    id: "mulheres",
+    titulo: "Mulheres",
+    descricaoCurta:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur quam veniam amet ducimus quibusdam vitae accusantium, tempore odit dolore accusamus! Et, inventore. Nostrum esse doloremque eligendi. Repudiandae facilis et eum.",
+    descricaoCompleta: `
+      <h4 class="text-xl font-semibold mb-3">Ministério Feminino</h4>
+      <p class="mb-4">Fortalecendo e capacitando mulheres em sua jornada de fé.</p>
+    `,
+    icon: Users2,
+  },
+  {
+    id: "homens",
+    titulo: "Homens",
+    descricaoCurta:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi magnam eveniet nemo optio repellendus vero iure quisquam tenetur necessitatibus dolorem explicabo esse, mollitia distinctio id? Quaerat aut facere quidem incidunt!",
+    descricaoCompleta: `
+      <h4 class="text-xl font-semibold mb-3">Ministério Masculino</h4>
+      <p class="mb-4">Desenvolvendo homens de caráter e liderança cristã.</p>
+    `,
+    icon: Users2,
+  },
+  {
+    id: "intercessao",
+    titulo: "Intercessão",
+    descricaoCurta:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum vel animi, optio alias ratione dolorem nostrum illum atque autem vitae, veniam nemo provident, nihil praesentium error ipsam minus beatae officia!",
+    descricaoCompleta: `
+      <h4 class="text-xl font-semibold mb-3">Ministério de Oração</h4>
+      <p class="mb-4">Intercedendo pela igreja e comunidade em oração.</p>
+    `,
+    icon: Users2,
+  },
+  {
+    id: "iluminacao",
+    titulo: "Iluminação",
+    descricaoCurta:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum vel animi, optio alias ratione dolorem nostrum illum atque autem vitae, veniam nemo provident, nihil praesentium error ipsam minus beatae officia!",
+    descricaoCompleta: `
+      <h4 class="text-xl font-semibold mb-3">Ministério de Iluminação</h4>
+      <p class="mb-4">Criando ambientes visuais que facilitam a adoração.</p>
+    `,
+    icon: Users2,
+  },
+];
 
 export default function Sobre() {
+  const [ministerioSelecionado, setMinisterioSelecionado] =
+    useState<Ministerio | null>(null);
+
   return (
     <div className="bg-white">
       {/* Banner */}
       <section className="relative h-100 flex items-center justify-center text-white">
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img
-          src="https://images.unsplash.com/photo-1729089049653-24312fdca908?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZW9wbGUlMjBwcmF5aW5nJTIwdG9nZXRoZXJ8ZW58MXx8fHwxNzY5NDgzNDkxfDA&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="Comunidade em oração"
+          src="https://images.unsplash.com/photo-1453219562534-36e2ce0ea18e?q=80&w=1673&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Biblia simbolizando a história"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
@@ -104,145 +236,78 @@ export default function Sobre() {
               Ministérios
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <Users2 className="w-8 h-8  text-black" />
+              {ministeriosData.map((ministerio) => (
+                <div
+                  key={ministerio.id}
+                  onClick={() => setMinisterioSelecionado(ministerio)}
+                  className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center cursor-pointer hover:shadow-xl transition-shadow duration-300 hover:scale-105 transform"
+                >
+                  <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                    <Users2 className="w-8 h-8 text-black" />
+                  </div>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                    {ministerio.titulo}
+                  </h3>
+                  <p className="text-gray-600 text-center">
+                    {ministerio.descricaoCurta}
+                  </p>
+                  <span className="mt-4 text-blue-600 font-semibold hover:text-blue-700">
+                    Saiba mais →
+                  </span>
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Boas-Vindas
-                </h3>
-                <p className="text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Praesentium dicta numquam suscipit temporibus natus, impedit
-                  nulla odit repellat minima eius velit molestiae unde dolor
-                  quibusdam magnam inventore nihil! Neque, culpa!.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <Users2 className="w-8 h-8  text-black" />
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Louvor
-                </h3>
-                <p className="text-gray-600">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Iste, ab. Quidem earum consequuntur dolore atque expedita!
-                  Culpa eius veritatis explicabo molestias, cum enim
-                  consequuntur possimus nulla necessitatibus dolor voluptate
-                  nisi?
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <Users2 className="w-8 h-8  text-black" />
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Sonosplastia
-                </h3>
-                <p className="text-gray-600">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse
-                  deleniti placeat accusantium doloribus maiores illum mollitia
-                  reiciendis laborum quis id facilis, incidunt ullam
-                  repellendus, asperiores natus pariatur quidem consectetur
-                  repellat!
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <Users2 className="w-8 h-8 text-black" />
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Kids
-                </h3>
-                <p className="text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                  vel animi, optio alias ratione dolorem nostrum illum atque
-                  autem vitae, veniam nemo provident, nihil praesentium error
-                  ipsam minus beatae officia!
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <Users2 className="w-8 h-8 text-black" />
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Bunkers
-                </h3>
-                <p className="text-gray-600">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. In
-                  accusantium obcaecati nihil dolorum suscipit quaerat? Officia
-                  sed alias eum aliquam. Harum at molestiae veniam illo fugiat
-                  voluptatibus facere impedit cumque!
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <Users2 className="w-8 h-8 text-black" />
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Mulheres
-                </h3>
-                <p className="text-gray-600">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Consequatur quam veniam amet ducimus quibusdam vitae
-                  accusantium, tempore odit dolore accusamus! Et, inventore.
-                  Nostrum esse doloremque eligendi. Repudiandae facilis et eum.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <Users2 className="w-8 h-8 text-black" />
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Homens
-                </h3>
-                <p className="text-gray-600">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Eligendi magnam eveniet nemo optio repellendus vero iure
-                  quisquam tenetur necessitatibus dolorem explicabo esse,
-                  mollitia distinctio id? Quaerat aut facere quidem incidunt!
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <Users2 className="w-8 h-8 text-black" />
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Intercessão
-                </h3>
-                <p className="text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                  vel animi, optio alias ratione dolorem nostrum illum atque
-                  autem vitae, veniam nemo provident, nihil praesentium error
-                  ipsam minus beatae officia!
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
-                <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <Users2 className="w-8 h-8 text-black" />
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Iluminação
-                </h3>
-                <p className="text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                  vel animi, optio alias ratione dolorem nostrum illum atque
-                  autem vitae, veniam nemo provident, nihil praesentium error
-                  ipsam minus beatae officia!
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
+
+        {/* Modal - adicionar depois da seção */}
+        {/* Modal */}
+        {ministerioSelecionado && (
+          <div
+            className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4"
+            onClick={() => setMinisterioSelecionado(null)}
+          >
+            <div
+              className="bg-white rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="sticky top-0 bg-white border-b border-gray-200 p-6 flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="bg-slate-200 w-14 h-14 rounded-full flex items-center justify-center">
+                    <Users2 className="w-7 h-7 text-black" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-gray-900">
+                    {ministerioSelecionado.titulo}
+                  </h2>
+                </div>
+                <button
+                  onClick={() => setMinisterioSelecionado(null)}
+                  className="text-gray-400 hover:text-gray-600 transition-colors p-2 hover:bg-gray-100 rounded-full"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              <div className="p-6">
+                <div
+                  className="text-gray-600 leading-relaxed"
+                  dangerouslySetInnerHTML={{
+                    __html: ministerioSelecionado.descricaoCompleta,
+                  }}
+                />
+              </div>
+
+              <div className="border-t border-gray-200 p-6 bg-gray-50">
+                <button
+                  onClick={() => setMinisterioSelecionado(null)}
+                  className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors font-semibold"
+                >
+                  Fechar
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Linha do Tempo */}
         <section className="py-16 px-4 bg-gray-50">
