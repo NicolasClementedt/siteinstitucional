@@ -217,8 +217,12 @@ export default function Contact() {
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
                       Telefone
                     </h3>
-                    <p className="text-gray-600">(11) 1234-5678</p>
-                    <p className="text-gray-600">(11) 98765-4321</p>
+                    <p className="text-gray-600 hover:text-blue-600">
+                      <a href="tel:(11) 1234-5678">(11) 1234-5678</a>
+                    </p>
+                    <p className="text-gray-600 hover:text-blue-600">
+                      <a href="tel:(11) 98765-4321">(11) 98765-4321</a>
+                    </p>
                   </div>
                 </div>
 
@@ -230,11 +234,15 @@ export default function Contact() {
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">
                       E-mail
                     </h3>
-                    <p className="text-gray-600">
-                      contato@igrejaseguidores.com.br
+                    <p className="text-gray-600 hover:text-blue-600">
+                      <a href="mailto:contato@igrejaseguidores.com.br">
+                        contato@igrejaseguidores.com.br
+                      </a>
                     </p>
-                    <p className="text-gray-600">
-                      secretaria@igrejaseguidores.com.br
+                    <p className="text-gray-600 hover:text-blue-600">
+                      <a href="mailto:secretaria@igrejaseguidores.com.br">
+                        secretaria@igrejaseguidores.com.br
+                      </a>
                     </p>
                   </div>
                 </div>

@@ -13,7 +13,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <img className="w-8 h-8 text-sky-600" src={logoBranca} />
               <span className="text-xl font-semibold">
-                Igreja Seguidores de Cristo
+                <Link to="/">Igreja Seguidores de Cristo</Link>
               </span>
             </div>
             <p className="text-gray-400">
@@ -80,7 +80,7 @@ export default function Footer() {
                   href="https://www.instagram.com/igrejaseguidoresoficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 >
                   <InstagramLogoIcon className="w-5 h-6 text-whitw" />
-                  <span className="text-gray-400 hover:text-gray-200">
+                  <span className="text-gray-400 hover:text-white">
                     {" "}
                     Acompanhe no Instagram{" "}
                   </span>
@@ -90,9 +90,11 @@ export default function Footer() {
               {/* Email */}
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-white" />
-                <span className="text-gray-400">
-                  contato@igrejaseguidores.com.br
-                </span>
+                <p className="text-gray-400 hover:text-white">
+                  <a href="mailto:contato@igrejaseguidores.com.br">
+                    contato@igrejaseguidores.com.br
+                  </a>{" "}
+                </p>
               </div>
             </div>
           </div>
