@@ -13,8 +13,7 @@ const ministeriosData: Ministerio[] = [
   {
     id: "boas-vindas",
     titulo: "Boas-Vindas",
-    descricaoCurta:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dicta numquam suscipit temporibus natus, impedit nulla odit repellat minima eius velit molestiae unde dolor quibusdam magnam inventore nihil! Neque, culpa!.",
+    descricaoCurta: "Lorem ipsum dolor sit amet",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Sobre o Ministério</h4>
       <p class="mb-4">O ministério de Boas-Vindas é responsável por receber e acolher todos que chegam à igreja, criando um ambiente caloroso e acolhedor.</p>
@@ -35,8 +34,7 @@ const ministeriosData: Ministerio[] = [
   {
     id: "louvor",
     titulo: "Louvor",
-    descricaoCurta:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, ab. Quidem earum consequuntur dolore atque expedita! Culpa eius veritatis explicabo molestias, cum enim consequuntur possimus nulla necessitatibus dolor voluptate nisi?",
+    descricaoCurta: "Lorem ipsum dolor sit amet",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Sobre o Ministério</h4>
       <p class="mb-4">O ministério de Louvor conduz a congregação em adoração através da música.</p>
@@ -53,8 +51,7 @@ const ministeriosData: Ministerio[] = [
   {
     id: "sonosplastia",
     titulo: "Sonosplastia",
-    descricaoCurta:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse deleniti placeat accusantium doloribus maiores illum mollitia reiciendis laborum quis id facilis, incidunt ullam repellendus, asperiores natus pariatur quidem consectetur repellat!",
+    descricaoCurta: "Lorem ipsum dolor sit, amet cons",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Sobre o Ministério</h4>
       <p class="mb-4">Responsável pela qualidade sonora de todos os eventos da igreja.</p>
@@ -64,8 +61,7 @@ const ministeriosData: Ministerio[] = [
   {
     id: "kids",
     titulo: "Kids",
-    descricaoCurta:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum vel animi, optio alias ratione dolorem nostrum illum atque autem vitae, veniam nemo provident, nihil praesentium error ipsam minus beatae officia!",
+    descricaoCurta: "Lorem ipsum dolor sit amet consec",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Ministério Infantil</h4>
       <p class="mb-4">Cuidando e ensinando as crianças sobre o amor de Deus.</p>
@@ -75,8 +71,7 @@ const ministeriosData: Ministerio[] = [
   {
     id: "bunkers",
     titulo: "Bunkers",
-    descricaoCurta:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. In accusantium obcaecati nihil dolorum suscipit quaerat? Officia sed alias eum aliquam. Harum at molestiae veniam illo fugiat voluptatibus facere impedit cumque!",
+    descricaoCurta: "Lorem, ipsum dolor sit amet consectetur adipis",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Ministério de Jovens</h4>
       <p class="mb-4">Conectando jovens com propósito e fé.</p>
@@ -86,8 +81,7 @@ const ministeriosData: Ministerio[] = [
   {
     id: "mulheres",
     titulo: "Mulheres",
-    descricaoCurta:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur quam veniam amet ducimus quibusdam vitae accusantium, tempore odit dolore accusamus! Et, inventore. Nostrum esse doloremque eligendi. Repudiandae facilis et eum.",
+    descricaoCurta: "Lorem ipsum, dolor sit amet consecte.",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Ministério Feminino</h4>
       <p class="mb-4">Fortalecendo e capacitando mulheres em sua jornada de fé.</p>
@@ -97,8 +91,7 @@ const ministeriosData: Ministerio[] = [
   {
     id: "homens",
     titulo: "Homens",
-    descricaoCurta:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi magnam eveniet nemo optio repellendus vero iure quisquam tenetur necessitatibus dolorem explicabo esse, mollitia distinctio id? Quaerat aut facere quidem incidunt!",
+    descricaoCurta: "Lorem ipsum dolor sit amet, consectetur ",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Ministério Masculino</h4>
       <p class="mb-4">Desenvolvendo homens de caráter e liderança cristã.</p>
@@ -108,8 +101,7 @@ const ministeriosData: Ministerio[] = [
   {
     id: "intercessao",
     titulo: "Intercessão",
-    descricaoCurta:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum vel animi, optio alias ratione dolorem nostrum illum atque autem vitae, veniam nemo provident, nihil praesentium error ipsam minus beatae officia!",
+    descricaoCurta: "Lorem ipsum dolor sit amet consectetur adipisicing el",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Ministério de Oração</h4>
       <p class="mb-4">Intercedendo pela igreja e comunidade em oração.</p>
@@ -119,8 +111,7 @@ const ministeriosData: Ministerio[] = [
   {
     id: "iluminacao",
     titulo: "Iluminação",
-    descricaoCurta:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum vel animi, optio alias ratione dolorem nostrum illum atque autem vitae, veniam nemo provident, nihil praesentium error ipsam minus beatae officia!",
+    descricaoCurta: "Lorem ipsum dolor sit amet consectetur adip",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Ministério de Iluminação</h4>
       <p class="mb-4">Criando ambientes visuais que facilitam a adoração.</p>

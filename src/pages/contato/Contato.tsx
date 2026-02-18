@@ -71,17 +71,120 @@ export default function Contact() {
           <h1 className="text-5xl md:text-6xl font-bold mb-4">
             Entre em Contato
           </h1>
-          <p className="text-xl text-blue-100">
-            Será um prazer ter um momento de comunhão contigo!
-          </p>
         </div>
       </section>
 
-      {/* Informações de Contato e Formulário */}
+      {/* Formulário */}
+      <section className="py-16 px-4">
+        <div className="max-w-3xl mx-auto">
+          <div className="flex flex-col mb-10">
+            <h2 className="text-3xl font-bold text-gray-900">
+              Envie uma Mensagem
+            </h2>
+            <p className="text-black">
+              Estamos prontos para ouvir você. Retornaremos o mais brevemente
+              possível.
+            </p>
+          </div>
+
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Nome Completo *
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                placeholder="Seu nome"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                E-mail *
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                placeholder="seu@email.com"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="phone"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Telefone
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                placeholder="(11) 12345-6789"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Mensagem *
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={6}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent resize-none"
+                placeholder="Como podemos ajudá-lo?"
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full bg-gray-700 hover:bg-black text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? (
+                "Enviando..."
+              ) : (
+                <>
+                  <Send className="w-5 h-5" />
+                  Envie sua mensagem agora
+                </>
+              )}
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* Informações de Contato */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Informações de Contato */}
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
                 Informações de Contato
@@ -136,7 +239,8 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                {/* Horários de Atendimento */}
+                <div className="flex items-start gap-4 h-full">
                   <div className="bg-black p-3 rounded-lg">
                     <Clock className="w-6 h-6 text-white" />
                   </div>
@@ -155,131 +259,33 @@ export default function Contact() {
                     </p>
                   </div>
                 </div>
-              </div>
 
-              {/* Redes Sociais */}
-              <div className="mt-8">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  Redes Sociais
-                </h3>
-                <div className="flex gap-4">
-                  <a
-                    target="_blank"
-                    href="https://www.instagram.com/igrejaseguidoresoficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                    className="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors"
-                    aria-label="Instagram"
-                  >
-                    <span className="text-slate-600 font-semibold">📷</span>
-                  </a>
+                {/* Redes Sociais */}
+                <div className="mt-8">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                    Redes Sociais
+                  </h3>
+                  <div className="flex gap-4">
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com/igrejaseguidoresoficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                      className="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors"
+                      aria-label="Instagram"
+                    >
+                      <span className="text-slate-600 font-semibold">📷</span>
+                    </a>
 
-                  <a
-                    target="_blank"
-                    href="https://youtube.com/@igrejaseguidoresoficial?si=rTRR3KFn7aPwITdu"
-                    className="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors"
-                    aria-label="YouTube"
-                  >
-                    <span className="text-sky-700 font-semibold">▶</span>
-                  </a>
+                    <a
+                      target="_blank"
+                      href="https://youtube.com/@igrejaseguidoresoficial?si=rTRR3KFn7aPwITdu"
+                      className="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors"
+                      aria-label="YouTube"
+                    >
+                      <span className="text-sky-700 font-semibold">▶</span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Formulário */}
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                Envie uma Mensagem
-              </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Nome Completo *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                    placeholder="Seu nome"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    E-mail *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                    placeholder="seu@email.com"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Telefone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                    placeholder="(11) 12345-6789"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Mensagem *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent resize-none"
-                    placeholder="Como podemos ajudá-lo?"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gray-700 hover:bg-black text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    "Enviando..."
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5" />
-                      Enviar Mensagem
-                    </>
-                  )}
-                </button>
-              </form>
             </div>
           </div>
         </div>
