@@ -41,7 +41,7 @@ export default function Footer() {
                 to="/recursos"
                 className="block text-gray-400 hover:text-white transition-colors"
               >
-                Recursos
+                {/*Recursos*/}
               </Link>
               <Link
                 to="/contato"
