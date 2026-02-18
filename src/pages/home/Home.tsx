@@ -8,7 +8,7 @@ export default function Home() {
       <div className="bg-white">
         {/* Seção Inicial/Banner */}
 
-        <section className="relative h-200 flex items-center justify-center text-white">
+        <section className="relative min-h-screen flex items-center justify-center text-white">
           <div className="absolute inset-0 bg-black/50 z-10" />
           <img
             src="https://images.unsplash.com/photo-1478147427282-58a87a120781?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -17,7 +17,7 @@ export default function Home() {
           />
           <div className="relative z-20 text-center px-4">
             <img
-              className="text-5xl md:text-6xl font-bold m-8 p-10"
+              className="w-full max-w-75 mx-auto my-8"
               src={logoEscritaBranca}
             />
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
