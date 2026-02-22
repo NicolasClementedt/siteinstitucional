@@ -263,59 +263,83 @@ export default function Sobre() {
         </div>
       </section>
 
-      {/* Liderança */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto ">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-            Pastores
+      {/* Liderança Premium */}
+      <section className="py-28 px-6 bg-linear-to-b from-gray-50 to-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-20">
+            Nossa Liderança
           </h2>
-          <div className="flex flex-row items-stretch gap-8">
-            <div className="text-center">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <a
-                  href="https://www.instagram.com/pastoralanduarte?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                  target="_blank"
-                >
-                  <img
-                    className="w-32 h-32 rounded-full text-black"
-                    src="https://ik.imagekit.io/alicia16/fotopastoralan.jpg"
-                  />
-                </a>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            {/* Pastor */}
+            <div className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-10 text-center flex flex-col">
+              <div className="relative mx-auto mb-8">
+                <img
+                  src="https://ik.imagekit.io/alicia16/fotopastoralan.jpg"
+                  alt="Pastor Alan Duarte"
+                  className="w-40 h-40 rounded-full object-cover mx-auto border-4 border-white shadow-md"
+                />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-1">
+
+              <h3 className="text-2xl font-semibold text-gray-900 tracking-wide">
                 Alan Duarte
               </h3>
-              <p className="text-gray-600 mb-2">Pastor Fundador</p>
-              <p className="text-gray-500 text-sm">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit
-                qui, tenetur ea dolorum inventore officia. Impedit debitis a
-                beatae earum perferendis incidunt autem, eum aliquid nihil
-                tempore, saepe, facilis quasi.
+              <p className="text-xs tracking-[0.2em] text-gray-500 uppercase mt-2 mb-6">
+                Pastor Fundador
               </p>
+
+              <div className="w-16 h-0.5 bg-gray-200 mx-auto mb-6" />
+
+              <p className="text-gray-600 leading-relaxed text-base grow">
+                Fundador da Igreja Seguidores de Cristo, o Pastor Alan Duarte
+                lidera com dedicação à Palavra de Deus e profundo amor pelas
+                pessoas. Seu ministério é marcado pelo serviço ao próximo,
+                compromisso com o ensino bíblico e busca constante por
+                excelência para a glória de Deus.
+              </p>
+
+              <a
+                href="https://www.instagram.com/pastoralanduarte"
+                target="_blank"
+                className="mt-8 text-sm font-semibold tracking-wide text-gray-800 hover:text-black transition-colors"
+              >
+                Ver Instagram →
+              </a>
             </div>
 
-            <div className="text-center">
-              <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <a
-                  href="https://www.instagram.com/praeleniceduarte?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                  target="_blank"
-                >
-                  <img
-                    className="w-32 h-32 rounded-full text-black"
-                    src="https://ik.imagekit.io/alicia16/fotopastoraelenice.jpg"
-                  />
-                </a>
+            {/* Pastora */}
+            <div className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-10 text-center flex flex-col">
+              <div className="relative mx-auto mb-8">
+                <img
+                  src="https://ik.imagekit.io/alicia16/fotopastoraelenice.jpg"
+                  alt="Pastora Elenice Duarte"
+                  className="w-40 h-40 rounded-full object-cover mx-auto border-4 border-white shadow-md"
+                />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-1">
+
+              <h3 className="text-2xl font-semibold text-gray-900 tracking-wide">
                 Elenice Duarte
               </h3>
-              <p className="text-gray-600 mb-2">Pastora Fundadora</p>
-              <p className="text-gray-500 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
-                velit id temporibus eius! Eligendi quam, quia dolor ea enim
-                maiores quisquam, asperiores alias provident voluptatum id
-                perspiciatis. Officia, corporis reiciendis.
+              <p className="text-xs tracking-[0.2em] text-gray-500 uppercase mt-2 mb-6">
+                Pastora Fundadora
               </p>
+
+              <div className="w-16 h-0.5 bg-gray-200 mx-auto mb-6" />
+
+              <p className="text-gray-600 leading-relaxed text-base grow">
+                A Pastora exerce seu ministério com sensibilidade, cuidado e
+                dedicação ao serviço. Seu chamado é fortalecer vidas através do
+                amor, da comunhão e do ensino fiel da Palavra, contribuindo com
+                zelo espiritual e compromisso com a excelência.
+              </p>
+
+              <a
+                href="https://www.instagram.com/praeleniceduarte"
+                target="_blank"
+                className="mt-8 text-sm font-semibold tracking-wide text-gray-800 hover:text-black transition-colors"
+              >
+                Ver Instagram →
+              </a>
             </div>
           </div>
         </div>
@@ -333,7 +357,7 @@ export default function Sobre() {
                 <div
                   key={ministerio.id}
                   onClick={() => setMinisterioSelecionado(ministerio)}
-                  className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center cursor-pointer hover:shadow-xl transition-shadow duration-300 hover:scale-105 transform"
+                  className="bg-white p-8 rounded-3xl shadow-lg flex flex-col items-center cursor-pointer hover:shadow-xl transition-shadow duration-300 hover:scale-105 transform"
                 >
                   <div className="bg-black w-16 h-16 rounded-full flex items-center justify-center mb-6">
                     {typeof ministerio.icon === "string" ? (
