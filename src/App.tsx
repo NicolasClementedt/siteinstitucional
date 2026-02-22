@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Footer from "./components/rodape/Rodape";
 import NavBar from "./components/navbar/NavBar";
@@ -11,7 +11,7 @@ import { ToastContainer } from "react-toastify";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop />
         <NavBar />
         <div>
@@ -33,7 +33,7 @@ function App() {
           pauseOnHover
           theme="dark"
         />
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
