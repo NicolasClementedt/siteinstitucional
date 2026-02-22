@@ -78,8 +78,9 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Amor</h3>
                 <p className="text-gray-600">
-                  Vivemos o amor de Cristo em todas as nossas ações e
-                  relacionamentos
+                  Vivemos o amor que um dia nos encontrou, alcançando pessoas
+                  por meio de relacionamentos significativos, comunhão
+                  verdadeira e cuidado mútuo.
                 </p>
               </div>
 
@@ -89,7 +90,9 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Palavra</h3>
                 <p className="text-gray-600">
-                  Fundamentados na Bíblia, a Palavra de Deus é nossa base e guia
+                  Somos fundamentados no ensino do Evangelho e na Bíblia como
+                  Palavra de Deus, buscando compreender, obedecer e viver seus
+                  princípios em nosso dia a dia.
                 </p>
               </div>
 
@@ -101,7 +104,9 @@ export default function Home() {
                   Comunidade e Serviço
                 </h3>
                 <p className="text-gray-600">
-                  Unidos como família, apoiando uns aos outros em amor e verdade
+                  Vivemos como família, inseridos em pequenos grupos,
+                  discipulado e ministérios, apoiando uns aos outros e servindo
+                  com propósito no desenvolvimento do Corpo de Cristo.
                 </p>
               </div>
 
@@ -111,7 +116,8 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Adoração</h3>
                 <p className="text-gray-600">
-                  Celebramos a Deus com alegria em nossas reuniões e cultos
+                  Celebramos a Deus com alegria em nossas reuniões e cultos,
+                  reconhecendo Sua presença e fortalecendo nossa fé em comunhão.
                 </p>
               </div>
             </div>
@@ -127,13 +133,22 @@ export default function Home() {
                   Quem Somos
                 </h2>
                 <p className="text-gray-600 text-lg mb-4">
-                  A Igreja Seguidores de Cristo nasceu de cultos simples feitos
-                  no lar, com o tempo o que começou pequeno foi crescendo até
-                  precisar de um local maior e depois um local maior ainda. Mais
-                  de uma década depois, mantendo a essência daqueles cultos
-                  íntimos, temos uma igreja que tem por missão o amor e o
-                  serviço, fundamentada na palavra de Deus, buscamos ser
-                  seguidores de Jesus Cristo.
+                  Somos uma igreja apaixonada por Jesus e por Sua Palavra, que
+                  busca viver o Evangelho de forma simples, prática e
+                  verdadeira. A Igreja Seguidores de Cristo nasceu com o
+                  propósito de alcançar pessoas e torná-las seguidoras de Jesus,
+                  ensinando o Evangelho do Reino de Deus e conduzindo cada
+                  pessoa a uma vida de relacionamento com Cristo, maturidade
+                  espiritual e comunhão sincera. Cremos que a igreja não é um
+                  ponto de chegada, mas um ponto de partida. Por isso, vivemos
+                  um discipulado intencional, inserindo pessoas no contexto da
+                  família da fé, promovendo crescimento espiritual,
+                  desenvolvimento pessoal e serviço no Corpo de Cristo. Somos
+                  uma comunidade formada por pessoas que desejam conhecer mais a
+                  Jesus e torná-Lo conhecido, influenciando vidas através de uma
+                  fé viva, contemporânea e inspirada pelo Espírito Santo. Nos
+                  reunimos para celebrar, aprender, servir e crescer juntos,
+                  crendo que cada pessoa tem um propósito no Reino de Deus.
                 </p>
 
                 <Link

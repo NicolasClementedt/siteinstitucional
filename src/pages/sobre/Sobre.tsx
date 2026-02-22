@@ -1,4 +1,4 @@
-import { History, Users2, X } from "lucide-react";
+import { History, Users2, X, type LucideIcon } from "lucide-react";
 import { useState } from "react";
 
 type Ministerio = {
@@ -6,117 +6,172 @@ type Ministerio = {
   titulo: string;
   descricaoCurta: string;
   descricaoCompleta: string;
-  icon: typeof Users2;
+  icon: LucideIcon | string;
 };
 
 const ministeriosData: Ministerio[] = [
   {
     id: "boas-vindas",
     titulo: "Boas-Vindas",
-    descricaoCurta: "Lorem ipsum dolor sit amet",
+    descricaoCurta: "Acolhendo com graça e verdade desde o primeiro contato.",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Sobre o Ministério</h4>
-      <p class="mb-4">O ministério de Boas-Vindas é responsável por receber e acolher todos que chegam à igreja, criando um ambiente caloroso e acolhedor.</p>
-      
+      <p class="mb-4">
+        O Ministério de Boas-Vindas expressa o amor de Cristo através da recepção
+        e do cuidado com cada pessoa que chega à igreja. Cremos que a igreja
+        não é um ponto de chegada, mas um ponto de partida — e tudo começa com
+        um acolhimento sincero.
+      </p>
+
       <h4 class="text-xl font-semibold mb-3">O que fazemos</h4>
       <ul class="list-disc list-inside mb-4 space-y-2">
-        <li>Recepção no estacionamento</li>
-        <li>Orientação aos visitantes</li>
-        <li>Distribuição de materiais</li>
-        <li>Atendimento às necessidades dos membros</li>
+        <li>Recepção e orientação aos visitantes</li>
+        <li>Integração de novos membros</li>
+        <li>Apoio durante as celebrações</li>
+        <li>Conexão com Pequenos Grupos</li>
       </ul>
-      
-      <h4 class="text-xl font-semibold mb-3">Como participar</h4>
-      <p>Entre em contato conosco através do email: boasvindas@igreja.com</p>
     `,
-    icon: Users2,
+    icon: "/icons/Logomarca Seguidores Branco PNG.png",
   },
+
   {
     id: "louvor",
     titulo: "Louvor",
-    descricaoCurta: "Lorem ipsum dolor sit amet",
+    descricaoCurta: "Conduzindo a igreja em adoração e celebração.",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Sobre o Ministério</h4>
-      <p class="mb-4">O ministério de Louvor conduz a congregação em adoração através da música.</p>
-      
-      <h4 class="text-xl font-semibold mb-3">Requisitos</h4>
-      <ul class="list-disc list-inside mb-4 space-y-2">
-        <li>Experiência com instrumento ou vocal</li>
-        <li>Disponibilidade para ensaios semanais</li>
-        <li>Comprometimento com a equipe</li>
-      </ul>
+      <p class="mb-4">
+        O Ministério de Louvor conduz a igreja em momentos de celebração e
+        adoração, reconhecendo a presença de Deus em nossas reuniões.
+        Valorizamos excelência, unidade e sensibilidade ao Espírito Santo.
+      </p>
+
+      <h4 class="text-xl font-semibold mb-3">Nossa Missão</h4>
+      <p class="mb-4">
+        Servir à igreja criando um ambiente que favoreça a comunhão,
+        a entrega e a exaltação do nome de Jesus Cristo.
+      </p>
     `,
-    icon: Users2,
+    icon: "/icons/Logomarca Seguidores Branco PNG.png",
   },
+
   {
     id: "sonosplastia",
     titulo: "Sonosplastia",
-    descricaoCurta: "Lorem ipsum dolor sit, amet cons",
+    descricaoCurta: "Excelência técnica a serviço da adoração.",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Sobre o Ministério</h4>
-      <p class="mb-4">Responsável pela qualidade sonora de todos os eventos da igreja.</p>
+      <p class="mb-4">
+        Responsável pela operação de som durante cultos e eventos,
+        este ministério contribui para que a Palavra seja comunicada
+        com clareza e a adoração aconteça com qualidade.
+      </p>
+
+      <p>
+        Servimos com dedicação e compromisso, entendendo que cada detalhe
+        técnico coopera para a edificação da igreja.
+      </p>
     `,
-    icon: Users2,
+    icon: "/icons/Logomarca Seguidores Branco PNG.png",
   },
+
   {
     id: "kids",
     titulo: "Kids",
-    descricaoCurta: "Lorem ipsum dolor sit amet consec",
+    descricaoCurta: "Formando pequenos seguidores de Jesus.",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Ministério Infantil</h4>
-      <p class="mb-4">Cuidando e ensinando as crianças sobre o amor de Deus.</p>
+      <p class="mb-4">
+        O Ministério Kids ensina a Palavra de Deus de maneira acessível,
+        criativa e bíblica, ajudando as crianças a desenvolverem um
+        relacionamento com Jesus desde cedo.
+      </p>
+
+      <p>
+        Cremos que discipulado começa na infância e que cada criança
+        é parte essencial do Corpo de Cristo.
+      </p>
     `,
-    icon: Users2,
+    icon: "/icons/Logomarca Seguidores Branco PNG.png",
   },
+
   {
     id: "bunkers",
     titulo: "Bunkers",
-    descricaoCurta: "Lorem, ipsum dolor sit amet consectetur adipis",
+    descricaoCurta: "Jovens firmes na fé e no propósito.",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Ministério de Jovens</h4>
-      <p class="mb-4">Conectando jovens com propósito e fé.</p>
+      <p class="mb-4">
+        O Bunkers reúne jovens que desejam viver uma fé prática,
+        fundamentada na Palavra e comprometida com o discipulado.
+      </p>
+
+      <p>
+        Promovemos comunhão, crescimento espiritual e preparo para
+        impactar a sociedade com valores cristãos.
+      </p>
     `,
-    icon: Users2,
+    icon: "/icons/Logomarca Seguidores Branco PNG.png",
   },
+
   {
     id: "mulheres",
     titulo: "Mulheres",
-    descricaoCurta: "Lorem ipsum, dolor sit amet consecte.",
+    descricaoCurta: "Fortalecendo mulheres na Palavra e na comunhão.",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Ministério Feminino</h4>
-      <p class="mb-4">Fortalecendo e capacitando mulheres em sua jornada de fé.</p>
+      <p class="mb-4">
+        Um espaço de crescimento, apoio e edificação espiritual.
+        O ministério promove discipulado, comunhão e desenvolvimento
+        de dons para o serviço no Reino de Deus.
+      </p>
     `,
-    icon: Users2,
+    icon: "/icons/Logomarca Seguidores Branco PNG.png",
   },
+
   {
     id: "homens",
     titulo: "Homens",
-    descricaoCurta: "Lorem ipsum dolor sit amet, consectetur ",
+    descricaoCurta: "Homens comprometidos com fé, caráter e liderança.",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Ministério Masculino</h4>
-      <p class="mb-4">Desenvolvendo homens de caráter e liderança cristã.</p>
+      <p class="mb-4">
+        Voltado ao fortalecimento espiritual dos homens, promovendo
+        responsabilidade, maturidade cristã e liderança fundamentada
+        na Palavra de Deus.
+      </p>
     `,
-    icon: Users2,
+    icon: "/icons/Logomarca Seguidores Branco PNG.png",
   },
+
   {
     id: "intercessao",
     titulo: "Intercessão",
-    descricaoCurta: "Lorem ipsum dolor sit amet consectetur adipisicing el",
+    descricaoCurta: "Sustentando a igreja em oração.",
     descricaoCompleta: `
-      <h4 class="text-xl font-semibold mb-3">Ministério de Oração</h4>
-      <p class="mb-4">Intercedendo pela igreja e comunidade em oração.</p>
+      <h4 class="text-xl font-semibold mb-3">Ministério de Intercessão</h4>
+      <p class="mb-4">
+        Dedicado à oração e intercessão pela igreja, liderança,
+        famílias e cidade. Cremos no poder da oração como fundamento
+        espiritual da obra de Deus.
+      </p>
     `,
-    icon: Users2,
+    icon: "/icons/Logomarca Seguidores Branco PNG.png",
   },
+
   {
     id: "iluminacao",
     titulo: "Iluminação",
-    descricaoCurta: "Lorem ipsum dolor sit amet consectetur adip",
+    descricaoCurta: "Criando ambientes que auxiliam a celebração.",
     descricaoCompleta: `
       <h4 class="text-xl font-semibold mb-3">Ministério de Iluminação</h4>
-      <p class="mb-4">Criando ambientes visuais que facilitam a adoração.</p>
+      <p class="mb-4">
+        Responsável pela ambientação visual dos cultos e eventos,
+        colaborando para que cada momento de celebração aconteça
+        com organização e excelência.
+      </p>
     `,
-    icon: Users2,
+    icon: "/icons/Logomarca Seguidores Branco PNG.png",
   },
 ];
 
@@ -141,36 +196,67 @@ export default function Sobre() {
       </section>
 
       {/* História */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-start gap-4 mb-8">
-            <div className="bg-slate-300 p-3 rounded-lg">
+          <div className="flex items-start gap-4 mb-10">
+            <div className="bg-slate-200 p-3 rounded-xl">
               <History className="w-8 h-8 text-slate-800" />
             </div>
+
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Como Começamos
               </h2>
-              <p className="text-gray-600 text-lg mb-4">
-                A Igreja Seguidores de Cristo nasceu de cultos simples feitos no
-                lar, com o tempo o que começou pequeno foi crescendo até
-                precisar de um local maior e depois um local maior ainda. Mais
-                de uma década depois, mantendo a essência daqueles cultos
-                íntimos, temos uma igreja que tem por missão o amor e o serviço,
-                fundamentada na palavra de Deus, buscamos ser seguidores de
-                Jesus Cristo.
+
+              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                Nossa história teve início em julho de 2013, na cidade de
+                Diadema, através de cultos realizados no lar do Pastor Alan
+                Duarte. Foram encontros simples, marcados por momentos de
+                intimidade, oração, comunhão e ensino da Palavra. Desde o
+                princípio, carregávamos o desejo de viver uma fé prática e
+                genuína, fundamentada no Evangelho de Jesus Cristo.
               </p>
-              <p className="text-gray-600 text-lg mb-4">
-                Nossa jornada tem sido marcada por momentos de crescimento,
-                desafios superados pela fé, e inúmeras vidas transformadas pelo
-                poder do Evangelho. Ao longo dos anos, nos expandimos para
-                incluir diversos ministérios, sempre mantendo nosso foco em
-                servir a Deus e à comunidade.
+
+              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                À medida que vidas eram alcançadas e fortalecidas, o espaço da
+                casa já não comportava mais as pessoas que se reuniam. Tornou-se
+                necessário buscar um local maior, e depois outro ainda maior.
+                Mesmo com o crescimento, mantivemos a essência daqueles
+                primeiros cultos: proximidade, discipulado intencional e
+                relacionamento verdadeiro.
               </p>
-              <p className="text-gray-600 text-lg">
-                Hoje, continuamos firmes em nossa missão de ser uma igreja que
-                reflete o amor de Cristo, acolhendo a todos com graça e verdade,
-                e capacitando cada membro a viver seu propósito em Deus.
+
+              <div className="border-l-4 border-slate-800 pl-6 my-10">
+                <p className="text-xl font-semibold text-gray-900 leading-relaxed">
+                  Cremos que a igreja não é um ponto de chegada, mas um ponto de
+                  partida.
+                </p>
+              </div>
+
+              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                Guiados pelo Espírito Santo, entendemos que nossa missão é
+                ganhar pessoas para Cristo, anunciando o Evangelho e formando
+                discípulos. Inserimos cada pessoa na vida ativa da igreja por
+                meio dos Pequenos Grupos, discipulado e ministérios, promovendo
+                crescimento espiritual, maturidade na fé e serviço no Corpo de
+                Cristo.
+              </p>
+
+              <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                Ao longo dos anos, Deus tem nos conduzido em um processo
+                constante de expansão e consolidação. Estruturamos departamentos
+                e ministérios com o propósito de desenvolver dons, fortalecer
+                relacionamentos e preparar cada membro para viver sua vocação
+                com responsabilidade e dedicação.
+              </p>
+
+              <p className="text-gray-700 text-lg leading-relaxed">
+                Hoje, permanecemos firmes em nossa identidade: uma igreja
+                apaixonada por Jesus, fundamentada na Palavra de Deus e
+                comprometida em viver o amor de Cristo na prática. Seguimos
+                acolhendo com graça e verdade, investindo em discipulado e
+                formando seguidores que impactam suas famílias, sua cidade e o
+                mundo ao seu redor.
               </p>
             </div>
           </div>
@@ -186,7 +272,15 @@ export default function Sobre() {
           <div className="flex flex-row items-stretch gap-8">
             <div className="text-center">
               <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Users2 className="w-16 h-16 text-black" />
+                <a
+                  href="https://www.instagram.com/pastoralanduarte?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                >
+                  <img
+                    className="w-32 h-32 rounded-full text-black"
+                    src="https://ik.imagekit.io/alicia16/fotopastoralan.jpg"
+                  />
+                </a>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-1">
                 Alan Duarte
@@ -202,7 +296,15 @@ export default function Sobre() {
 
             <div className="text-center">
               <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Users2 className="w-16 h-16  text-black" />
+                <a
+                  href="https://www.instagram.com/praeleniceduarte?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  target="_blank"
+                >
+                  <img
+                    className="w-32 h-32 rounded-full text-black"
+                    src="https://ik.imagekit.io/alicia16/fotopastoraelenice.jpg"
+                  />
+                </a>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-1">
                 Elenice Duarte
@@ -233,8 +335,16 @@ export default function Sobre() {
                   onClick={() => setMinisterioSelecionado(ministerio)}
                   className="bg-white p-8 rounded-lg shadow-md flex flex-col items-center cursor-pointer hover:shadow-xl transition-shadow duration-300 hover:scale-105 transform"
                 >
-                  <div className="bg-slate-200 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                    <Users2 className="w-8 h-8 text-black" />
+                  <div className="bg-black w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                    {typeof ministerio.icon === "string" ? (
+                      <img
+                        src={ministerio.icon}
+                        alt={ministerio.titulo}
+                        className="w-16 h-16 rounded-full"
+                      />
+                    ) : (
+                      <ministerio.icon className="w-8 h-8 text-white" />
+                    )}
                   </div>
                   <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                     {ministerio.titulo}
@@ -242,7 +352,7 @@ export default function Sobre() {
                   <p className="text-gray-600 text-center">
                     {ministerio.descricaoCurta}
                   </p>
-                  <span className="mt-4 text-blue-600 font-semibold hover:text-blue-700">
+                  <span className="mt-4 text-blue-800 font-semibold hover:text-black">
                     Saiba mais →
                   </span>
                 </div>
@@ -309,71 +419,81 @@ export default function Sobre() {
             <div className="space-y-8">
               <div className="flex gap-6">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 text-black rounded-full flex items-center justify-center font-bold">
-                    1
+                  <div className="w-12 h-12 m-5 text-black rounded-full flex items-center justify-center font-bold">
+                    2013
                   </div>
                   <div className="w-1 h-full bg-slate-200 mt-2" />
                 </div>
                 <div className="pb-8 text-left">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    1995 - Fundação
+                    O Início
                   </h3>
                   <p className="text-gray-600">
-                    Primeira reunião com 15 pessoas em uma casa. Nasce a visão
-                    de uma igreja acolhedora.
+                    Em julho de 2013, nossa história começou com cultos
+                    realizados no lar do Pastor Alan Duarte, na cidade de
+                    Diadema. Encontros simples, marcados por oração, comunhão e
+                    ensino da Palavra, deram início a uma caminhada de fé e
+                    propósito.
                   </p>
                 </div>
               </div>
 
               <div className="flex gap-6">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 text-black rounded-full flex items-center justify-center font-bold">
-                    2
+                  <div className="w-12 h-12 m-5 text-black rounded-full flex items-center justify-center font-bold">
+                    2014
                   </div>
                   <div className="w-1 h-full bg-slate-200 mt-2" />
                 </div>
                 <div className="pb-8 text-left">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    2000 - Primeiro Templo
+                    Um Novo Espaço
                   </h3>
                   <p className="text-gray-600">
-                    Inauguração do primeiro templo próprio, com capacidade para
-                    200 pessoas.
+                    Com o crescimento das reuniões e o aumento no número de
+                    pessoas, tornou-se necessário buscar um local maior. Em
+                    resposta às orações, Deus nos conduziu a um espaço onde
+                    pudemos concretizar nossa adoração e continuar expandindo a
+                    obra.
                   </p>
                 </div>
               </div>
 
               <div className="flex gap-6">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 text-black rounded-full flex items-center justify-center font-bold">
-                    3
+                  <div className="w-12 h-12 m-5 text-black rounded-full flex items-center justify-center font-bold">
+                    Crescimento
                   </div>
                   <div className="w-1 h-full bg-slate-200 mt-2" />
                 </div>
                 <div className="pb-8 text-left">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    2010 - Expansão dos Ministérios
+                    Estrutura e Discipulado
                   </h3>
                   <p className="text-gray-600">
-                    Criação de diversos ministérios: jovens, crianças, música,
-                    ação social e evangelismo.
+                    Ao longo dos anos, estruturamos ministérios, departamentos,
+                    Pequenos Grupos e discipulado intencional. Nosso foco
+                    permaneceu o mesmo: formar seguidores de Jesus Cristo,
+                    promover maturidade espiritual e desenvolver cada pessoa
+                    para viver seu propósito.
                   </p>
                 </div>
               </div>
 
               <div className="flex gap-6 text-left">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 text-black rounded-full flex items-center justify-center font-bold">
-                    4
+                  <div className="w-12 h-12 m-5 text-black rounded-full flex items-center justify-center font-bold">
+                    Hoje
                   </div>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    2020 - Crescimento Contínuo
+                    Um Igreja em Movimento
                   </h3>
                   <p className="text-gray-600">
-                    Alcançamos 500 membros ativos e iniciamos transmissões
-                    online, expandindo nosso alcance.
+                    Permanecemos firmes na missão de anunciar o Evangelho,
+                    acolher com graça e verdade, e preparar pessoas para serem
+                    enviadas e impactarem suas famílias, sua cidade e o mundo.
                   </p>
                 </div>
               </div>
